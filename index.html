@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>JOVI Camera | SnapTask</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <button class="back-button-fixed" id="backButton">
+        <span class="back-arrow">&lt;</span>
+    </button>
+
+    <div class="side-menu" id="sideMenu">
+        <div class="side-menu-content">
+            <div class="side-menu-title">DEV NAV</div>
+
+            <a href="./index.html">
+                <div class="side-menu-item" data-page="camera">
+                    <img src="./images/camera.png" alt="Câmera" class="menu-icon">
+                    <span>Câmera</span>
+                </div>
+            </a>
+
+            <a href="./pages/snaptask.html">
+                <div class="side-menu-item" data-page="snaptask">
+                    <img src="./images/brilho.png" alt="SnapTask" class="menu-icon">
+                    <span>SnapTask</span>
+                </div>
+            </a>
+
+            <a href="./pages/editordoc.html">
+                <div class="side-menu-item" data-page="editor-doc">
+                    <img src="./images/editor-doc.png" alt="Editor Doc" class="menu-icon">
+                    <span>Editor Doc</span>
+                </div>
+            </a>
+
+            <a href="./pages/leitordecod.html">
+                <div class="side-menu-item" data-page="leitor-codigos">
+                    <img src="./images/scaner.png" alt="Leitor Códigos" class="menu-icon">
+                    <span>Leitor Códigos</span>
+                </div>
+            </a>
+
+            <a href="./pages/qr.html">
+                <div class="side-menu-item" data-page="qr-share">
+                    <img src="./images/qr-code.png" alt="QR Share" class="menu-icon">
+                    <span>QR Share</span>
+                </div>
+            </a>
+
+            <a href="./pages/galeria.html">
+                <div class="side-menu-item" data-page="galeria">
+                    <img src="./images/galeria.png" alt="Galeria" class="menu-icon">
+                    <span>Galeria</span>
+                </div>
+            </a>
+
+            <a href="./pages/flashcards.html">
+                <div class="side-menu-item" data-page="flashcards">
+                    <img src="./images/brain.png" alt="Flashcards" class="menu-icon">
+                    <span>Flashcards</span>
+                </div>
+            </a>
+
+            <a href="./pages/libras.html">
+                <div class="side-menu-item" data-page="libras">
+                    <img src="./images/mao.png" alt="Libras" class="menu-icon">
+                    <span>Libras</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <div class="app-container">
+        <div class="header">
+            <h1 class="app-title">JOVI Camera</h1>
+            <p class="app-subtitle">Experiência de câmera intuitiva + SnapTask para processamento inteligente</p>
+        </div>
+        
+        <div class="phone-mockup">
+      
+            <div class="camera-viewfinder">
+                <div class="viewfinder-content" id="viewfinder">
+                    <div class="grid-overlay">
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                        <div class="grid-cell"></div>
+                    </div>
+                </div>
+                
+                <div class="flash-overlay" id="flash"></div>
+                
+                <div class="top-bar">
+                    <button class="top-btn" id="btnEye">
+                        <img src="./images/view.png" alt="Visualizar" class="icon-img">
+                    </button>
+                    <button class="top-btn" id="btnFocus">
+                        <img src="./images/scaner.png" alt="Foco" class="icon-img">
+                    </button>
+                    <button class="top-btn" id="btnHide">
+                        <img src="./images/olho-fechado.png" alt="Ocultar" class="icon-img">
+                    </button>
+                    <span class="zeiss-logo">ZEISS</span>
+                    <button class="top-btn" id="btnFlash">
+                        <img src="./images/raio.png" alt="Flash" class="icon-img">
+                    </button>
+                    <button class="top-btn" id="btnSettings">
+                        <img src="./images/setting.png" alt="Configurações" class="icon-img">
+                    </button>
+                </div>
+            </div>
+            
+            <div class="zoom-bar">
+                <button class="zoom-btn" data-zoom="0.6">0.6x</button>
+                <button class="zoom-btn active" data-zoom="1">1x</button>
+                <button class="zoom-btn" data-zoom="2">2x</button>
+                <button class="zoom-btn" data-zoom="5">5x</button>
+                <button class="zoom-btn" data-zoom="10">10x</button>
+            </div>
+            
+            <div class="bottom-controls">
+                <div class="modes-bar">
+                    <button class="mode-btn" data-mode="0">Noite</button>
+                    <button class="mode-btn" data-mode="1">Retrato</button>
+                    <button class="mode-btn active" data-mode="2">Foto</button>
+                    <button class="mode-btn" data-mode="3">Vídeo</button>
+                    <button class="mode-btn" data-mode="4">Microfilme</button>
+                    <button class="more-btn" id="moreBtn"> Mais </button>
+                </div>
+                
+                <div class="capture-row">
+                   
+                    <a href="./pages/galeria.html" class="gallery-btn" id="galleryBtn">
+                        <img src="./images/galeria.png" alt="Galeria" alt="gallery-img">
+                    </a>
+                    
+                    <button class="capture-btn" id="captureBtn">
+                        <div class="capture-inner"></div>
+                    </button>
+                    
+                    <button class="rotate-btn" id="rotateBtn">
+                        <img src="./images/sync.png" alt="Rotacionar" class="rotate-img">
+                    </button>
+                </div>
+                
+                <a href="./pages/snaptask.html" class="snaptask-btn"> <img src="./images/brilho.png" alt="Scan" class="snap-icon"> SnapTask </a>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="more-menu" id="moreMenu">
+        <div class="more-menu-content">
+            <div class="more-header">
+                <h3>Editar</h3>
+                <button class="close-more" id="closeMore">✕</button>
+            </div>
+            <div class="more-grid">
+                <div class="more-item" data-mode="alta-resolucao">
+                    <img src="./images/alta-resolucao.png" alt="Alta Resolução" class="more-icon">
+                    <span>Alta Resolução</span>
+                </div>
+                <div class="more-item" data-mode="panoramica">
+                    <img src="./images/panoramica.png" alt="Panorâmica" class="more-icon">
+                    <span>Panorâmica</span>
+                </div>
+                <div class="more-item" data-mode="doc-ultra-hd">
+                    <img src="./images/doc-ultra-hd.png" alt="Doc Ultra HD" class="more-icon">
+                    <span>Doc Ultra HD</span>
+                </div>
+                <div class="more-item" data-mode="camera-lenta">
+                    <img src="./images/camera-lenta.png" alt="Câmera Lenta" class="more-icon">
+                    <span>Câmera Lenta</span>
+                </div>
+                <div class="more-item" data-mode="intervalo">
+                    <img src="./images/intervalo.png" alt="Intervalo" class="more-icon">
+                    <span>Intervalo</span>
+                </div>
+                <div class="more-item" data-mode="superlua">
+                    <img src="./images/superlua.png" alt="Superlua" class="more-icon">
+                    <span>Superlua</span>
+                </div>
+                <div class="more-item" data-mode="astro">
+                    <img src="./images/astro.png" alt="Astro" class="more-icon">
+                    <span>Astro</span>
+                </div>
+                <div class="more-item" data-mode="profissional">
+                    <img src="./images/profissional.png" alt="Profissional" class="more-icon">
+                    <span>Profissional</span>
+                </div>
+                <div class="more-item" data-mode="instantaneo">
+                    <img src="./images/instantaneo.png" alt="Instantâneo" class="more-icon">
+                    <span>Instantâneo</span>
+                </div>
+                <div class="more-item" data-mode="foco-em-movimento">
+                    <img src="./images/foco-em-movimento.png" alt="Foto em Mov." class="more-icon">
+                    <span>Foto em Mov.</span>
+                </div>
+                <div class="more-item" data-mode="comida">
+                    <img src="./images/comida.png" alt="Comida" class="more-icon">
+                    <span>Comida</span>
+                </div>
+                <div class="more-item" data-mode="vis-dupla">
+                    <img src="./images/view.png" alt="Vis. Dupla" class="more-icon">
+                    <span>Vis. Dupla</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
