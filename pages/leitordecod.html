@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+
+    <title>Dev OCR | SnapTask</title>
+
+    <link rel="stylesheet" href="./leitordecod.css">
+
+</head>
+
+<body>
+    <button class="back-button-fixed" id="backButton">
+
+        <span class="back-arrow">&lt;</span>
+
+    </button>
+
+    <div class="side-menu" id="sideMenu">
+
+        <div class="side-menu-content">
+
+            <div class="side-menu-title">
+                DEV NAV
+            </div>
+
+            <a href="../index.html">
+
+                <div class="side-menu-item">
+
+                    <img src="../images/camera.png"
+                    class="menu-icon">
+
+                    <span>Câmera</span>
+
+                </div>
+
+            </a>
+
+            <a href="../pages/snaptask.html">
+
+                <div class="side-menu-item">
+
+                    <img src="../images/brilho.png"
+                    class="menu-icon">
+
+                    <span>SnapTask</span>
+
+                </div>
+
+            </a>
+
+            <a href="../pages/editordoc.html">
+
+                <div class="side-menu-item">
+
+                    <img src="../images/editor-doc.png"
+                    class="menu-icon">
+
+                    <span>Editor Doc</span>
+
+                </div>
+
+            </a>
+
+            <a href="../pages/leitordecod.html">
+
+                <div class="side-menu-item">
+
+                    <img src="../images/scaner.png"
+                    class="menu-icon">
+
+                    <span>Leitor Códigos</span>
+
+                </div>
+
+            </a>
+
+            <a href="../pages/qr.html">
+
+                <div class="side-menu-item">
+
+                    <img src="../images/qr-code.png"
+                    class="menu-icon">
+
+                    <span>QR Share</span>
+
+                </div>
+
+            </a>
+
+            <a href="../pages/galeria.html">
+
+                <div class="side-menu-item">
+
+                    <img src="../images/galeria.png"
+                    class="menu-icon">
+
+                    <span>Galeria</span>
+
+                </div>
+
+            </a>
+
+            <a href="../pages/flashcards.html">
+
+                <div class="side-menu-item">
+
+                    <img src="../images/brain.png"
+                    class="menu-icon">
+
+                    <span>Flashcards</span>
+
+                </div>
+
+            </a>
+
+            <a href="../pages/libras.html">
+
+                <div class="side-menu-item">
+
+                    <img src="../images/mao.png"
+                    class="menu-icon">
+
+                    <span>Libras</span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="app-container">
+
+        <div class="header">
+
+            <h1 class="app-title">
+                JOVI Camera
+            </h1>
+
+            <p class="app-subtitle">
+                Experiência de câmera intuitiva + SnapTask para processamento inteligente
+            </p>
+
+        </div>
+
+        <div class="phone-mockup">
+
+            <div class="ocr-page">
+
+                <div class="ocr-header">
+
+                    <a href="./snaptask.html"
+                    class="header-icon-btn">
+
+                        <img src="../images/retorno.png"
+                        class="header-icon">
+
+                    </a>
+
+                    <div class="title-area">
+
+                        <h2>
+                            Dev OCR
+                        </h2>
+
+                        <span>
+                            Foto de código fonte
+                        </span>
+
+                    </div>
+
+                    <button class="share-btn">
+
+                        <img src="../images/share.png"
+                        class="share-icon">
+
+                    </button>
+
+                </div>
+
+                <div class="preview-box">
+
+                    <img src="../images/scaner.png"
+                    class="preview-icon">
+
+                    <p>
+                        Foto do código fonte
+                    </p>
+
+                </div>
+
+                <div class="code-header">
+
+                    <span class="code-title">
+                        CÓDIGO EXTRAÍDO
+                    </span>
+
+                    <span class="lang-badge">
+                        Python
+                    </span>
+
+                </div>
+
+                <div class="code-box"
+                id="codeBox">
+
+                <pre><code>
+                <span class="purple">def</span> <span class="blue">fibonacci</span>(n):
+                    <span class="purple">if</span> n &lt;= <span class="orange">1</span>:
+                        <span class="purple">return</span> 
+
+                    <span class="purple">return</span> <span class="blue">fibonacci</span>(n-<span class="orange">1</span>) + <span class="blue">fibonacci</span>(n-<span class="orange">2</span>)
+
+                result = <span class="blue">fibonacci</span>(<span class="orange">10</span>)
+
+                <span class="purple">print</span>(<span class="green">f"Resultado: {result}"</span>)
+                </code></pre>
+
+                </div>
+
+                <textarea id="editorArea" class="editor-area">
+                    def fibonacci(n):
+                        if n <= 1:
+                            return n
+
+                        return fibonacci(n-1) + fibonacci(n-2)
+
+                    result = fibonacci(10)
+
+                    print(f"Resultado: {result}")
+                </textarea>
+
+
+                <div class="actions">
+
+                    <button class="copy-btn" id="copyBtn"> Copiar Código </button>
+
+                    <button class="export-btn"> Exportar </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="./leitordecod.js"></script>
+
+</body>
+</html>
